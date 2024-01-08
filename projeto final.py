@@ -4,6 +4,7 @@ import numpy as np
 import sqlite3
 import pickle
 import datetime
+import tkinter as tk
 
 
 class App:
@@ -11,10 +12,6 @@ class App:
         self.janela = Tk()
         self.janela.geometry('790x800')
         self.janela.title('Sistema de Venda de Passagem')
-
-        self.image = PhotoImage(file="onibus.jpeg") 
-        self.image_label = Label(self.canvas1, image=self.image)
-        self.image_label.place(x=20, y=0)
 
         self.canvas1 = Canvas(self.janela, width=790, height=800)
         self.canvas1.pack()
@@ -65,6 +62,8 @@ class App:
 
         self.Button3 = Button(self.canvas1, background='red', font='Arial 12 bold', text='Deletar', command=self.deletar )
         self.Button3.place(x=0, y=585, height=50, width=130)
+
+       
 
 
         self.janela.mainloop()
